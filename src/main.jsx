@@ -12,11 +12,16 @@ import AuthProvider from './Components/Context/AuthProvider/AuthProvider.jsx';
 import SignUp from './Components/Pages/Auth/SignUp.jsx';
 import AllVolunteer from './Components/Pages/AllVolunteer/AllVolunteer';
 import VolunteerDetails from './Components/Pages/Home/VolunteerDetails';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import AddVolunteer from './Components/Pages/AddVolunteer/AddVolunteer.jsx';
+import MyPost from './Components/Pages/MyPost/MyPost.jsx';
+import UpdatePost from './Components/Pages/MyPost/UpdatePost.jsx';
+import RequestPosts from './Components/Pages/RequestPosts/RequestPosts.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-    // errorElement: <h1 className="md:text-5xl text-center font-bold text-red-500">Page is Not Found</h1>,
+    errorElement: <h1 className="md:text-5xl text-center font-bold text-red-500">Page is Not Found</h1>,
     children: [
       {
         path: '/',
@@ -28,8 +33,25 @@ const router = createBrowserRouter([
       },
       {
         path: '/volunteer/:id',
-        element: <VolunteerDetails></VolunteerDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/volunteers/${params.id}`)
+        element: <PrivateRoute><VolunteerDetails></VolunteerDetails></PrivateRoute>,
+        loader: ({ params }) => fetch(`https://volunteer-managment-server-three.vercel.app/volunteers/${params.id}`)
+      },
+      {
+        path: '/addVolunteer',
+        element: <PrivateRoute><AddVolunteer></AddVolunteer></PrivateRoute>
+      },
+      {
+        path: '/myPosts',
+        element: <PrivateRoute><MyPost></MyPost></PrivateRoute>
+      },
+      {
+        path: '/requestPosts',
+        element: <PrivateRoute><RequestPosts></RequestPosts></PrivateRoute>
+      },
+      {
+        path: '/updatePost/:id',
+        element: <PrivateRoute><UpdatePost></UpdatePost></PrivateRoute>,
+        loader: ({ params }) => fetch(`https://volunteer-managment-server-three.vercel.app/volunteers/${params.id}`)
       },
       {
         path: '/login',

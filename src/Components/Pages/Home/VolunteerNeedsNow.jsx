@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const VolunteerNeedsNow = () => {
     let [volunteers, SetVolunteers] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:5000/volunteers')
+        axios.get('https://volunteer-managment-server-three.vercel.app/volunteers')
             .then(res => SetVolunteers(res.data.slice(0, 6)))
     }, [])
     return (
@@ -14,7 +14,7 @@ const VolunteerNeedsNow = () => {
             <div className='grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:my-8'>
                 {
                     volunteers.map((volunteer, i) =>
-                        <div key={i} className="card w-full bg-base-100 shadow-md hover:shadow-lg transition-shadow duration-200">
+                        <div key={i} className="card w-full bg-base-100 shadow-md hover:shadow-lg transition-shadow duration-200  dark:text-black">
                             <figure>
                                 <img src={volunteer.thumbnail} alt={volunteer.postTitle} className="w-full h-48 object-cover" />
                             </figure>
@@ -35,7 +35,7 @@ const VolunteerNeedsNow = () => {
             </div>
             <div className='text-center my-6'>
                 <Link to='/volunteer'>
-                    <button className='btn btn-outline border px-20 rounded-none border-orange-600'>See All</button>
+                    <button className='btn btn-outline border px-20 rounded-none border-orange-600 dark:text-white'>See All</button>
                 </Link>
             </div>
         </div>

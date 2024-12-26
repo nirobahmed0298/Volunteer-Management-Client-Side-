@@ -61,25 +61,25 @@ const SignUp = () => {
                     <label className="label">
                         <span className="label-text dark:text-white">Name</span>
                     </label>
-                    <input type="text" placeholder="Name" name='name' className="input input-bordered rounded-none" required />
+                    <input type="text" placeholder="Name" name='name' className="input input-bordered rounded-none dark:text-black" required />
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text dark:text-white">Photo</span>
                     </label>
-                    <input type="text" placeholder="Your Photo URL" name='PhotoUrl' className="input input-bordered rounded-none" required />
+                    <input type="text" placeholder="Your Photo URL" name='PhotoUrl' className="input input-bordered rounded-none dark:text-black" required />
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text dark:text-white">Email</span>
                     </label>
-                    <input type="email" placeholder="email" name='email' className="input input-bordered rounded-none" required />
+                    <input type="email" placeholder="email" name='email' className="input input-bordered rounded-none dark:text-black" required />
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text dark:text-white">Password</span>
                     </label>
-                    <input type="password" placeholder="password" name='password' className="input input-bordered rounded-none" required />
+                    <input type="password" placeholder="password" name='password' className="input input-bordered rounded-none dark:text-black" required />
                 </div>
                 {
                     error && <span className="label-text text-red-500">{error}</span>
