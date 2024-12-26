@@ -35,7 +35,7 @@ const AllVolunteer = () => {
                     onClick={handleTableLayout}
                     className="mb-4 bg-blue-500 text-white px-4 py-2 rounded"
                 >
-                    {tableLayout ? <FaList></FaList> : <IoGrid></IoGrid>}
+                    {tableLayout ? <IoGrid></IoGrid> : <FaList></FaList>}
                 </button>
             </div>
             {
