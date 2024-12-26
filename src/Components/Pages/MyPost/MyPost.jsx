@@ -54,7 +54,7 @@ const MyPost = () => {
                         animate={{ x: 0 }}
                         transition={{ duration: 0.4, repeat: Infinity }}
                         className="text-5xl font-bold">No.!
-                        <motion.span animate={{ color: ['#f26229', '#2683bd', '#27cc50', '#2826bd'] }} transition={{ duration: 2, repeat: Infinity }}> Volunteet Request </motion.span>
+                        <motion.span animate={{ color: ['#f26229', '#2683bd', '#27cc50', '#2826bd'] }} transition={{ duration: 2, repeat: Infinity }}> Volunteet Posts </motion.span>
                     </motion.h1>
                     :
                     <div className="overflow-x-auto border p-12 border-orange-400">
