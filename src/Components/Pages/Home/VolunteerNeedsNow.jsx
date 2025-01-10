@@ -6,7 +6,7 @@ const VolunteerNeedsNow = () => {
     let [volunteers, SetVolunteers] = useState([])
     useEffect(() => {
         axios.get('https://volunteer-managment-server-three.vercel.app/volunteers')
-            .then(res => SetVolunteers(res.data.slice(0, 6)))
+            .then(res => SetVolunteers(res.data.slice(0, 4)))
     }, [])
     return (
         <div className='md:my-10'>
@@ -20,12 +20,12 @@ const VolunteerNeedsNow = () => {
                             </figure>
                             <div className="card-body">
                                 <h2 className="card-title text-[16px] md:text-lg font-semibold">{volunteer.postTitle}</h2>
-                                <p className="badge badge-primary">{volunteer.category}</p>
+                                <p className="badge bg-green-500 text-white">{volunteer.category}</p>
                                 <p className="mt-2 text-sm">
                                     <strong>Deadline:</strong> {volunteer.deadline}
                                 </p>
                                 <div className="card-actions justify-end mt-4">
-                                    <Link to={`/volunteer/${volunteer._id}`} className="btn btn-outline btn-primary btn-sm">View Details</Link>
+                                    <Link to={`/volunteer/${volunteer._id}`} className="btn btn-outline border-green-500 btn-sm">View Details</Link>
                                 </div>
                             </div>
                         </div>
@@ -35,7 +35,7 @@ const VolunteerNeedsNow = () => {
             </div>
             <div className='text-center my-6'>
                 <Link to='/volunteer'>
-                    <button className='btn btn-outline border px-20 rounded-none border-orange-600 dark:text-white'>See All</button>
+                    <button className='btn btn-outline border px-20 rounded-none border-green-500 dark:text-white'>See All</button>
                 </Link>
             </div>
         </div>

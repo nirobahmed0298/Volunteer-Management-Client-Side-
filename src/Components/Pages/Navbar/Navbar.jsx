@@ -40,72 +40,74 @@ const Navbar = () => {
             .catch(error => (error.message))
     }
     return (
-        <div className="navbar bg-base-100 dark:bg-black dark:text-white">
-            <div className="navbar-start">
-                <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M4 6h16M4 12h8m-8 6h16" />
-                        </svg>
+        <div className='w-full fixed top-0 z-10 bg-base-200 drop-shadow-lg dark:bg-black dark:text-white'>
+            <div className="navbar w-11/12 mx-auto dark:bg-black dark:text-white">
+                <div className="navbar-start">
+                    <div className="dropdown">
+                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-5 w-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul
+                            tabIndex={0}
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            {links}
+                        </ul>
                     </div>
-                    <ul
-                        tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                    <Link to='/' className="md:text-2xl font-bold">Volunteer<span className='text-orange-600'>.</span></Link>
+                </div>
+                <div className="navbar-center hidden lg:flex">
+                    <ul className="menu menu-horizontal px-1">
                         {links}
                     </ul>
                 </div>
-                <Link to='/' className="md:text-2xl font-bold">Volunteer<span className='text-orange-600'>.</span></Link>
-            </div>
-            <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                    {links}
-                </ul>
-            </div>
-            <div className="navbar-end">
-                <div>
-                    <button className='text-xl mr-1 md:mr-2 p-2' onClick={() => darkModeHandler()}>
-                        {
-                            dark && <IoSunny />
-                        }
-                        {
-                            !dark && <IoMoon />
-                        }
-                    </button>
-                </div>
-                {
-                    user ?
-                        <div className="dropdown dropdown-end md:ml-2 dark:text-black">
-                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                                <div className="w-10 md:w-14 rounded-full border-2 border-green-400">
-                                    {
-                                        user && <img src={user && user.photoURL} alt="User Profile" />
-                                    }
+                <div className="navbar-end">
+                    <div>
+                        <button className='text-xl mr-1 md:mr-2 p-2' onClick={() => darkModeHandler()}>
+                            {
+                                dark && <IoSunny />
+                            }
+                            {
+                                !dark && <IoMoon />
+                            }
+                        </button>
+                    </div>
+                    {
+                        user ?
+                            <div className="dropdown dropdown-end md:ml-2 dark:text-black">
+                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 md:w-14 rounded-full border-2 border-green-400">
+                                        {
+                                            user && <img src={user && user.photoURL} alt="User Profile" />
+                                        }
+                                    </div>
                                 </div>
+                                <ul
+                                    tabIndex={0}
+                                    className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                                    <li>
+                                        <a>Email : {user && user.email.slice(0, 5)}**.com</a>
+                                    </li>
+                                    <li>
+                                        <a>Name : {user && user.displayName}</a>
+                                    </li>
+                                    <li><a onClick={handleLogout}>Logout<FaSignOutAlt></FaSignOutAlt></a></li>
+                                </ul>
                             </div>
-                            <ul
-                                tabIndex={0}
-                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                                <li>
-                                    <a>Email : {user && user.email.slice(0, 5)}**.com</a>
-                                </li>
-                                <li>
-                                    <a>Name : {user && user.displayName}</a>
-                                </li>
-                                <li><a onClick={handleLogout}>Logout<FaSignOutAlt></FaSignOutAlt></a></li>
-                            </ul>
-                        </div>
-                        :
-                        <Link to='/login' className="btn rounded-none px-10 ml-4 border-green-400">Login</Link>
-                }
+                            :
+                            <Link to='/login' className="btn rounded-none px-10 ml-4 border-green-400">Login</Link>
+                    }
+                </div>
             </div>
         </div>
     );

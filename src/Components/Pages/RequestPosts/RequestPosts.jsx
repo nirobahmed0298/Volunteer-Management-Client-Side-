@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const Requestreqs = () => {
-    let {user} = useContext(AuthContext)
+    let { user } = useContext(AuthContext)
     let [request, setRequest] = useState([])
     useEffect(() => {
         axios.get(`https://volunteer-managment-server-three.vercel.app/requestPosts?email=${user.email}`)
@@ -49,8 +49,8 @@ const Requestreqs = () => {
     }
 
     return (
-        <div className='text-center my-5'>
-            <h1 className='font-bold my-4 md:text-2xl'>Volunteer Requests</h1>
+        <div className='text-center my-5 min-h-screen md:w-11/12 mx-auto'>
+            <h1 className='font-bold my-8 md:text-2xl'>Volunteer Requests</h1>
             {
                 request.length === 0 ?
                     <motion.h1
@@ -60,7 +60,7 @@ const Requestreqs = () => {
                         <motion.span animate={{ color: ['#f26229', '#2683bd', '#27cc50', '#2826bd'] }} transition={{ duration: 2, repeat: Infinity }}> Volunteet Request </motion.span>
                     </motion.h1>
                     :
-                    <div className="overflow-x-auto border p-12 border-orange-400">
+                    <div className="overflow-x-auto border p-12 border-green-400">
                         <table className="table">
                             {/* head */}
                             <thead>
@@ -96,7 +96,7 @@ const Requestreqs = () => {
                                             </td>
                                             <th>
                                                 <button onClick={() => handleRequestAccept(req._id)} className={`btn border-green-400 btn-xs rounded-none md:ml-2`}>Accept</button>
-                                                <button onClick={() => handleRequestDelate(req._id)} className="btn btn-xs rounded-none md:ml-2 border-red-400">Cancel</button>
+                                                <button onClick={() => handleRequestDelate(req._id)} className="btn btn-xs rounded-none my-6 md:ml-2 border-red-400">Cancel</button>
                                             </th>
                                         </tr>
                                     )

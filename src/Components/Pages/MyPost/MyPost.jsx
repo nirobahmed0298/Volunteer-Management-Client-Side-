@@ -46,8 +46,8 @@ const MyPost = () => {
         });
     };
     return (
-        <div className='text-center my-5'>
-            <h1 className='font-bold my-4 md:text-2xl'>My Posts</h1>
+        <div className='text-center my-5 min-h-screen md:w-11/12 mx-auto'>
+            <h1 className='font-bold my-8 md:text-2xl'>My Posts</h1>
             {
                 posts.length === 0 ?
                     <motion.h1
@@ -57,7 +57,7 @@ const MyPost = () => {
                         <motion.span animate={{ color: ['#f26229', '#2683bd', '#27cc50', '#2826bd'] }} transition={{ duration: 2, repeat: Infinity }}> Volunteet Posts </motion.span>
                     </motion.h1>
                     :
-                    <div className="overflow-x-auto border p-12 border-orange-400">
+                    <div className="overflow-x-auto border p-12 border-green-500">
                         <table className="table">
                             {/* head */}
                             <thead>
@@ -94,8 +94,8 @@ const MyPost = () => {
                                             </td>
                                             <td>{post.category}</td>
                                             <th>
-                                                <Link to={`/updatePost/${post._id}`} className="btn btn-xs rounded-none border-emerald-400"><FaPen></FaPen>Update</Link>
-                                                <button onClick={() => handlePostDelate(post._id)} className="btn btn-xs rounded-none md:ml-2 border-red-400"><MdDelete></MdDelete>Delete</button>
+                                                <Link to={`/updatePost/${post._id}`} className="btn btn-xs rounded-none border-emerald-400">Update</Link>
+                                                <button onClick={() => handlePostDelate(post._id)} className="btn btn-xs rounded-none  my-6 md:ml-2 border-red-400">Delete</button>
                                             </th>
                                         </tr>
                                     )

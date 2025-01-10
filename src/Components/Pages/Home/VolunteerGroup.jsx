@@ -29,29 +29,29 @@ const VolunteerGroup = () => {
                             </span>
                         </p>
                         <div className="flex justify-center mt-4 space-x-4">
-                            <a
-                                href="#"
+                            <a target='_blank'
+                                href="https://myaccount.google.com/"
                                 className="text-gray-600 hover:text-blue-500"
                                 aria-label="Google Plus"
                             >
                                 <FaGooglePlus></FaGooglePlus>
                             </a>
-                            <a
-                                href="#"
+                            <a target='_blank'
+                                href="https://www.instagram.com/"
                                 className="text-gray-600 hover:text-blue-500"
                                 aria-label="Instagram"
                             >
                                 <FaInstagram></FaInstagram>
                             </a>
-                            <a
-                                href="#"
+                            <a target='_blank'
+                                href="https://x.com/"
                                 className="text-gray-600 hover:text-blue-500"
                                 aria-label="Twitter"
                             >
                                 <FaTwitter></FaTwitter>
                             </a>
-                            <a
-                                href="#"
+                            <a target='_blank'
+                                href="https://web.facebook.com/"
                                 className="text-gray-600 hover:text-blue-500"
                                 aria-label="Facebook"
                             >
@@ -80,29 +80,29 @@ const VolunteerGroup = () => {
                             </span>
                         </p>
                         <div className="flex justify-center mt-4 space-x-4">
-                            <a
-                                href="#"
+                            <a target='_blank'
+                                href="https://myaccount.google.com/"
                                 className="text-gray-600 hover:text-blue-500"
                                 aria-label="Google Plus"
                             >
                                 <FaGooglePlus></FaGooglePlus>
                             </a>
-                            <a
-                                href="#"
+                            <a target='_blank'
+                                href="https://www.instagram.com/"
                                 className="text-gray-600 hover:text-blue-500"
                                 aria-label="Instagram"
                             >
                                 <FaInstagram></FaInstagram>
                             </a>
-                            <a
-                                href="#"
+                            <a target='_blank'
+                                href="https://x.com/"
                                 className="text-gray-600 hover:text-blue-500"
                                 aria-label="Twitter"
                             >
                                 <FaTwitter></FaTwitter>
                             </a>
-                            <a
-                                href="#"
+                            <a target='_blank'
+                                href="https://web.facebook.com/"
                                 className="text-gray-600 hover:text-blue-500"
                                 aria-label="Facebook"
                             >
@@ -110,6 +110,7 @@ const VolunteerGroup = () => {
                             </a>
                         </div>
                     </div>
+              
                 </div>
                 <div className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-700 hover:-translate-y-2">
                     <figure>
@@ -131,29 +132,29 @@ const VolunteerGroup = () => {
                             </span>
                         </p>
                         <div className="flex justify-center mt-4 space-x-4">
-                            <a
-                                href="#"
+                            <a target='_blank'
+                                href="https://myaccount.google.com/"
                                 className="text-gray-600 hover:text-blue-500"
                                 aria-label="Google Plus"
                             >
                                 <FaGooglePlus></FaGooglePlus>
                             </a>
-                            <a
-                                href="#"
+                            <a target='_blank'
+                                href="https://www.instagram.com/"
                                 className="text-gray-600 hover:text-blue-500"
                                 aria-label="Instagram"
                             >
                                 <FaInstagram></FaInstagram>
                             </a>
-                            <a
-                                href="#"
+                            <a target='_blank'
+                                href="https://x.com/"
                                 className="text-gray-600 hover:text-blue-500"
                                 aria-label="Twitter"
                             >
                                 <FaTwitter></FaTwitter>
                             </a>
-                            <a
-                                href="#"
+                            <a target='_blank'
+                                href="https://web.facebook.com/"
                                 className="text-gray-600 hover:text-blue-500"
                                 aria-label="Facebook"
                             >
@@ -182,29 +183,29 @@ const VolunteerGroup = () => {
                             </span>
                         </p>
                         <div className="flex justify-center mt-4 space-x-4">
-                            <a
-                                href="#"
+                            <a target='_blank'
+                                href="https://myaccount.google.com/"
                                 className="text-gray-600 hover:text-blue-500"
                                 aria-label="Google Plus"
                             >
                                 <FaGooglePlus></FaGooglePlus>
                             </a>
-                            <a
-                                href="#"
+                            <a target='_blank'
+                                href="https://www.instagram.com/"
                                 className="text-gray-600 hover:text-blue-500"
                                 aria-label="Instagram"
                             >
                                 <FaInstagram></FaInstagram>
                             </a>
-                            <a
-                                href="#"
+                            <a target='_blank'
+                                href="https://x.com/"
                                 className="text-gray-600 hover:text-blue-500"
                                 aria-label="Twitter"
                             >
                                 <FaTwitter></FaTwitter>
                             </a>
-                            <a
-                                href="#"
+                            <a target='_blank' 
+                                href="https://web.facebook.com/"
                                 className="text-gray-600 hover:text-blue-500"
                                 aria-label="Facebook"
                             >

@@ -42,7 +42,7 @@ const AddVolunteer = () => {
     }
 
     return (
-        <div className="min-h-scree  py-8 px-4 flex justify-center items-center">
+        <div className="min-h-scree  py-8 px-4 flex justify-center items-center mt-20">
             <div className="w-full max-w-3xl border bg-white p-8 rounded-lg shadow-lg dark:text-black">
                 <h2 className="text-2xl font-semibold text-center mb-6">Add Volunteer Need Post</h2>
                 <form onSubmit={handleAddVolunteerPost}>

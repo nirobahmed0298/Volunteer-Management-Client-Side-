@@ -47,8 +47,7 @@ const VolunteerDetails = () => {
             })
     }
     return (
-        <div className='my-2 md:my-10'>
-
+        <div className='my-2 md:my-10 '>
             {/* Modal */}
             <dialog id="my_modal_4" className="modal">
                 <div className="modal-box w-11/12  max-w-5xl">
@@ -206,7 +205,7 @@ const VolunteerDetails = () => {
                 </div>
             </dialog>
 
-            <div className="max-w-4xl mx-auto bg-base-100 shadow-lg rounded-lg overflow-hidden">
+            <div className="max-w-4xl mx-auto mt-24 bg-base-100 shadow-lg rounded-lg overflow-hidden">
                 <figure>
                     <img
                         src={detailsData.thumbnail}
