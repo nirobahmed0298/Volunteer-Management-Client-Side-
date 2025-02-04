@@ -1,7 +1,7 @@
 ## Volunteer Management 
 
 <div align="center">
-  <img height="200" src="https://i.ibb.co.com/60DD73k1/Screenshot-165.png"/>
+  <img height="200"  width="1000" src="https://i.ibb.co.com/60DD73k1/Screenshot-165.png"/>
 </div>
 
 **Website Link** : https://volunteer-management-7abaa.web.app/
