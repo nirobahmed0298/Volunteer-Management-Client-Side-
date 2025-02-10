@@ -17,11 +17,12 @@ import AddVolunteer from './Components/Pages/AddVolunteer/AddVolunteer.jsx';
 import MyPost from './Components/Pages/MyPost/MyPost.jsx';
 import UpdatePost from './Components/Pages/MyPost/UpdatePost.jsx';
 import RequestPosts from './Components/Pages/RequestPosts/RequestPosts.jsx';
+import ErrorPage from './Components/Pages/ErrorPage/ErrorPage.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-    errorElement: <h1 className="md:text-5xl text-center font-bold text-red-500">Page is Not Found</h1>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',

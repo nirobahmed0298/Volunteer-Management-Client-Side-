@@ -20,8 +20,6 @@ const AllVolunteer = () => {
         SetVolunteers(sortedData);
     }
 
-
-
     return (
         <div className='mt-24 w-11/12 mx-auto'>
             <h1 className='text-center my-3 text-xl md:text-4xl font-bold'>View all Volunteer needs</h1>
