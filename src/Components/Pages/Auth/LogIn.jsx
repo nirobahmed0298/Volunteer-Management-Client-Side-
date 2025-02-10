@@ -56,7 +56,7 @@ const LogIn = () => {
                 }
                 <div className="form-control mt-6">
                     <button className="btn bg-green-400 text-white font-bold rounded-none">Login</button>
-                    <div className='mt-6 text-center space-x-4'>
+                    <div className='mt-6 text-center space-y-2 md:space-x-4'>
                         <button onClick={handleGoogleLogin} className='btn rounded-none border-e-green-400  border-2 border-b-green-400'><FaGoogle></FaGoogle> Login With Google</button>
                         <button className='btn rounded-none border-e-green-400 border-2 border-b-green-400'><FaGithub></FaGithub> Login With GitHub</button>
                     </div>

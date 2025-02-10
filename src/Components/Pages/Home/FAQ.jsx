@@ -3,7 +3,7 @@ import React from 'react';
 const FAQ = () => {
     return (
         <div className='my-5 md:my-10'>
-            <h1 className='text-xl md:text-4xl text-center font-bold'>Volunteers FAQ</h1>
+            <h1 className='text-xl md:text-4xl text-center font-bold mb-3'>Volunteers FAQ</h1>
             <div className="collapse collapse-arrow bg-base-200 my-2 dark:text-black">
                 <input type="radio" name="my-accordion-2" />
                 <div className="collapse-title text-xl font-medium">What is the mission of our volunteer program?</div>

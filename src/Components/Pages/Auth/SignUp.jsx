@@ -92,7 +92,7 @@ const SignUp = () => {
                 </div>
                 <div className='text-center space-y-2'>
                     <h1 className='font-bold my-2'>Or</h1>
-                    <div className='mt-6 text-center space-x-4'>
+                    <div className='mt-6 text-center space-y-2 md:space-x-4'>
                         <button onClick={handleGoogleSignUp} className='btn rounded-none border-e-green-400  border-2 border-b-green-400'><FaGoogle></FaGoogle> SignUp With Google</button>
                         <button className='btn rounded-none border-e-green-400 border-2 border-b-green-400'><FaGithub></FaGithub> SignUp With GitHub</button>
                     </div>
